@@ -1,0 +1,693 @@
+/* ==== STANDING PAGE ==== */
+.standing-page {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 40px;
+}
+
+.top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-line h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: -3px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.serie-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-top: 14px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-blue {
+  background-color: #00e7ff;
+  color: black;
+}
+
+.btn-red {
+  background-color: #f52a2a;
+  color: white;
+}
+
+.title-underline {
+  height: 6px;
+  background: linear-gradient(to right, #00e7ff, #005eff);
+  margin: 2px 0 25px;
+  width: 100%;
+}
+
+
+.btn {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-top: 14px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-blue {
+  background-color: #00e7ff;
+  color: black;
+}
+
+.btn-red {
+  background-color: #f52a2a;
+  color: white;
+}
+
+.title-underline {
+  height: 6px;
+  background: linear-gradient(to right, #00e7ff, #005eff);
+  margin: 2px 0 25px;
+  width: 100%;
+}
+
+/* ===== TABLE HEADERS ===== */
+.column-header {
+  display: grid;
+  grid-template-columns:
+    1fr   /* Pos */
+    0.7fr   /* No. */
+    1.5fr   /* Car */
+    1fr   /* Win */
+    1fr   /* Team */
+    0.7fr   /* CH Win */
+    1.4fr   /* Best Time */
+    0.7fr   /* Win% */
+    1fr;  /* Total */
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0 6px; /* Titre plus bas */
+  border-bottom: 6px solid #ff2b2b; /* ligne rouge bien droite */
+  margin-bottom: 16px;
+  border-radius: 0; /* coins carrés */
+}
+
+/* Déplacement vers le bas de tous les titres */
+.column-header > div {
+  transform: translateY(4px);
+}
+
+/* ===== TABLE DATA ROWS ===== */
+.column-row {
+  display: grid;
+  grid-template-columns:
+    1fr   /* Pos */
+    0.7fr   /* No. */
+    1.5fr   /* Car */
+    1fr   /* Win */
+    1fr   /* Team */
+    0.7fr   /* CH Win */
+    1.4fr   /* Best Time */
+    0.7fr   /* Win% */
+    1fr;  /* Total */
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 20px;
+}
+.serie-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.serie-selector button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #222;
+  color: white;
+  border: 2px solid cyan;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.serie-selector button:hover {
+  transform: scale(1.05);
+}
+
+.serie-selector button.active {
+  background-color: cyan;
+  color: black;
+}
+
+.serie-table {
+  width: 100%;
+  max-width: 800px;
+}
+
+.serie-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.serie-table th,
+.serie-table td {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.top-buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.serie-buttons,
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+
+.start-calif,
+.start-race {
+  background-color: #e0e0e0; /* gris clair par défaut */
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 10px;
+  height: 34px;
+  line-height: 1;
+  border: none;
+  border-radius: 10px;
+  margin-top: 25px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.start-race {
+  background-color: black;
+  color: white;
+}
+
+.race-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 0px;
+  margin-left: 285px; /* ← tasse vers la gauche ici */
+}
+
+.button-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 28px;
+  background-color: #888; /* gris moyen */
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 28px;
+  background-color: #888;
+  margin-top: 23px; /* ajuste ici selon ce que tu veux */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  font-size: 24px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 0 15px black;
+  text-align: center;
+  width: 400px;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content input {
+  font-size: 24px;
+  padding: 8px 16px;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+.admin-buttons {
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+}
+
+.admin-buttons button {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #e70e0e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admin-buttons button:hover {
+  background-color: #ac0909;
+}
+
+
+/* Style du tableau de résultats */
+.recap-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+
+.recap-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.recap-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+
+/* podium */
+.recap-table tr:nth-child(1) td:first-child { color: #d4af37; font-weight: bold; } /* Or */
+.recap-table tr:nth-child(2) td:first-child { color: #c0c0c0; font-weight: bold; } /* Argent */
+.recap-table tr:nth-child(3) td:first-child { color: #cd7f32; font-weight: bold; } /* Bronze */
+
+
+
+/* Podium */
+.recap-table tr:nth-child(1) { background-color: #ffd70033; } /* doré pâle */
+.recap-table tr:nth-child(2) { background-color: #c0c0c033; } /* argent */
+.recap-table tr:nth-child(3) { background-color: #cd7f3233; } /* bronze */
+
+.recap-table thead tr {
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* Cyan -> Bleu */
+  color: white;
+}
+.recap-table th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.modal-content input {
+  font-size: 24px;
+  padding: 8px 16px;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #00e7ff; /* contour cyan */
+  background-color: #fff; /* fond blanc */
+  color: black; /* texte noir */
+  box-shadow: 0 0 6px #00e7ff66; /* glow discret cyan */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.modal-content input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00e7ff99; /* glow légèrement plus fort au focus */
+  border-color: #00cfff; /* contour un peu plus vif au focus */
+}
+
+.modal-content input::placeholder {
+  color: rgba(0,0,0,0.5);
+}
+
+/* Container du logo pour limiter la taille */
+.logo-container {
+    height: 50px;       /* hauteur fixe de la navbar pour le logo */
+    display: flex;
+    align-items: center; /* centre verticalement l'image */
+    overflow: hidden;    /* coupe ce qui dépasse */
+}
+
+/* Image du logo */
+.logo-container img {
+    max-height: 100%;    /* l'image prendra au maximum la hauteur du container */
+    width: auto;         /* garde les proportions */
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* Indicateurs de Position (+/-) */
+/* Indicateurs de Position (+/-) */
+.pos-cell-content {
+    display: flex;
+    align-items: center;
+    /* Pousser tout le contenu de la cellule vers la gauche */
+    justify-content: flex-start; 
+    /* Laisser un petit espace entre le bord gauche et le contenu */
+    padding-left: 25px; 
+    gap: 6px;
+    width: 100%;
+}
+
+.rank-number {
+    font-weight: 800; /* Mettre en gras */
+    font-size: 18px;  /* AUGMENTÉ : Rend le numéro de position plus grand */
+}
+
+.delta-indicator {
+    font-size: 20px; /* Légèrement augmenté */
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px; 
+    /* Décaler légèrement vers la gauche si nécessaire pour contrer le décalage */
+    margin-left: -5px; 
+}
+
+.delta-up { color: #00ff00; }   /* Vert */
+.delta-down { color: #ff003c; } /* Rouge */
+.delta-neutral { display: none; } /* On cache les flèches si aucun changement */
+
+.delta-indicator {
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px; /* Largeur fixe pour aligner */
+}
+
+.delta-up { color: #00ff00; }   /* Vert */
+.delta-down { color: #ff003c; } /* Rouge */
+.delta-neutral { opacity: 0.2; } /* Gris discret si pas de changement */
+
+
+
+
+
+
+
+
+/* Style pour les voitures éliminées (non qualifiées ou éliminées en playoff) */
+.eliminated-visual {
+    color: #6e6e6e !important;      /* Gris foncé/pâle */
+    opacity: 0.5;                /* Semi-transparent */
+    filter: grayscale(100%);     /* En noir et blanc */
+    pointer-events: none;        /* Empêche de cliquer dessus */
+}
+
+/* On s'assure que les éléments internes suivent */
+.eliminated-visual div, 
+.eliminated-visual .rank-number {
+    color: #6e6e6e !important;
+    text-shadow: none !important;
+}
+
+/* ========================================= */
+/* FASTWAY MODALS - STYLES CENTRALISÉS       */
+/* ========================================= */
+.fastway-modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10000; backdrop-filter: blur(5px);
+    opacity: 0; transition: opacity 0.2s ease;
+}
+.fastway-modal-overlay.active { opacity: 1; }
+
+.fastway-modal-wrapper {
+    position: relative; border-radius: 18px; padding: 3px;
+    background: linear-gradient(90deg, #ff003c, #0077ff, #ff003c); background-size: 300% 300%;
+    box-shadow: 0 0 25px rgba(255,0,60,0.5), 0 0 40px rgba(0,120,255,0.4);
+    animation: ledPulse 3.5s ease-in-out infinite, ledGradient 6s linear infinite;
+    transform: scale(0.9); transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    max-width: 90%;
+}
+.fastway-modal-overlay.active .fastway-modal-wrapper { transform: scale(1); }
+.fastway-modal-wrapper.shake { animation: shake 0.4s ease, ledPulse 3.5s infinite; }
+
+.fastway-modal-content {
+    background: #1a1a1a; border-radius: 15px; padding: 30px;
+    min-width: 320px; max-width: 450px; font-family: 'Poppins', sans-serif;
+    color: #fff; text-align: center; display: flex; flex-direction: column; gap: 15px;
+}
+
+.fastway-modal-title {
+    margin: 0; font-weight: 800; letter-spacing: 1px; font-size: 22px; text-transform: uppercase;
+    color: #ff003c; text-shadow: 0 0 10px rgba(255,0,60,0.3);
+}
+
+.fastway-modal-title.gradient {
+    background: linear-gradient(#fff, #bbb);
+    background-clip: text;             /* Version standard */
+    -webkit-background-clip: text;      /* Pour Chrome/Safari */
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.fastway-modal-text { font-size: 15px; line-height: 1.5; color: #ddd; }
+
+.fastway-btn-primary {
+    padding: 10px 25px; border: none; border-radius: 8px;
+    background: linear-gradient(135deg, #333, #111); color: #fff;
+    border: 1px solid #444; font-weight: bold; cursor: pointer;
+    font-family: 'Poppins', sans-serif; transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.fastway-btn-primary:hover { border-color: #fff; background: #444; }
+
+.fastway-time-input {
+    width: 160px; padding: 8px; border-radius: 8px; border: 2px solid #333;
+    background: #111; color: #fff; caret-color: #fff; font-family: 'Courier New', monospace;
+    font-size: 22px; font-weight: bold; text-align: center; outline: none; transition: all 0.3s ease; letter-spacing: 2px;
+}
+.fastway-time-input:focus { border-color: #0077ff; background: #0a0a0a; }
+
+@keyframes ledGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes ledPulse { 0%, 100% { box-shadow: 0 0 20px rgba(255,0,60,0.4), 0 0 30px rgba(0,120,255,0.3); } 50% { box-shadow: 0 0 35px rgba(255,0,60,0.6), 0 0 50px rgba(0,120,255,0.5); } }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+/* --- STYLES DUEL FASTWAY --- */
+.carBtn {
+    width: 100%; padding: 15px 10px; border-radius: 12px; border: none;
+    color: #fff; font-weight: 700; cursor: pointer; font-size: 16px;
+    transition: all 0.2s ease-in-out; position: relative; z-index: 1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.carBtn:hover { transform: translateY(-2px) scale(1.02); filter: brightness(1.1); }
+.redBtn { background: linear-gradient(135deg, #ff003c, #b3002a); }
+.blueBtn { background: linear-gradient(135deg, #0077ff, #004ca3); }
+
+.lightning-btn {
+    position: absolute; top: -10px; right: -5px; z-index: 10;
+    width: 30px; height: 30px; border: none; background: transparent; 
+    color: #ffea00; font-size: 22px; cursor: pointer; transition: all 0.2s ease;
+    display: flex; align-items: center; justify-content: center;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.5));
+}
+.lightning-btn:hover { color: #fff; text-shadow: 0 0 10px #ffea00; transform: scale(1.1) rotate(5deg); }
+
+.manual-container {
+    max-height: 0; overflow: hidden; opacity: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-top: 0;
+}
+.manual-container.open { max-height: 70px; opacity: 1; margin-top: 12px; }
+
+.time-input-duel {
+    width: 100%; box-sizing: border-box; padding: 8px; border-radius: 8px; 
+    background: #0a0a0a; border: 2px solid #333; color: #fff; 
+    font-family: 'Courier New', monospace; font-size: 16px; text-align: center;
+}
+.red-input:focus { border-color: #ff003c; box-shadow: 0 0 15px rgba(255,0,60,0.3); }
+.blue-input:focus { border-color: #0077ff; box-shadow: 0 0 15px rgba(0,119,255,0.3); }
+
+/* --- DESIGN DU MODAL DE DUEL FASTWAY --- */
+.duel-wrapper {
+    position: relative;
+    border-radius: 24px;
+    padding: 3px;
+    background: linear-gradient(90deg, #ff003c, #0077ff, #ff003c);
+    background-size: 300% 300%;
+    animation: ledPulse 3.5s ease-in-out infinite, ledGradient 4s linear infinite;
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fastway-modal-overlay.active .duel-wrapper {
+    transform: scale(1);
+}
+
+.duel-content {
+    background: #111;
+    border-radius: 21px;
+    padding: 25px;
+    min-width: 500px;
+    max-width: 90vw;
+    color: #fff;
+    text-align: center;
+}
+
+.car-btn-container {
+    display: flex; 
+    align-items: flex-start; 
+    gap: 15px; 
+    margin-bottom: 20px;
+}
+
+.car-btn {
+    width: 100%; padding: 15px 10px; border-radius: 12px; border: none;
+    color: #fff; font-weight: 700; cursor: pointer; font-size: 16px;
+    transition: all 0.2s ease-in-out; position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.car-btn.red { background: linear-gradient(135deg, #ff003c, #b3002a); }
+.car-btn.blue { background: linear-gradient(135deg, #0077ff, #004ca3); }
+.car-btn:hover { transform: translateY(-2px) scale(1.02); filter: brightness(1.1); }
+
+.lightning-btn {
+    position: absolute; top: -10px; right: -5px; z-index: 10;
+    width: 30px; height: 30px; border: none; background: transparent; 
+    color: #ffea00; font-size: 22px; cursor: pointer;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.5));
+}
+
+.manual-input-zone {
+    max-height: 0; overflow: hidden; opacity: 0;
+    transition: all 0.4s ease;
+}
+.manual-input-zone.open { max-height: 70px; opacity: 1; margin-top: 12px; }
+
+@keyframes ledGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes ledPulse { 0%, 100% { box-shadow: 0 0 20px rgba(255,0,60,0.2); } 50% { box-shadow: 0 0 40px rgba(0,120,255,0.4); } }
+
+/* --- FASTWAY CHAMPION MODAL --- */
+.champion-wrapper {
+    position: relative; border-radius: 24px; padding: 5px;
+    background: linear-gradient(90deg, #FFD700, #ff003c, #FFD700); background-size: 300% 300%;
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.4), 0 0 70px rgba(255, 0, 60, 0.3);
+    animation: ledPulseGold 3.5s infinite, ledGradient 4s linear infinite;
+    transform: scale(0.8); transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.fastway-modal-overlay.active .champion-wrapper { transform: scale(1); }
+.champion-content { background: #111; border-radius: 21px; padding: 40px 50px; width: 450px; max-width: 90vw; text-align: center; }
+.race-win-title { font-weight: 900; letter-spacing: 2px; font-size: 20px; color: #ff003c; text-transform: uppercase; text-shadow: 0 0 10px rgba(255, 0, 60, 0.5); margin-bottom: 25px; }
+.champ-name { font-size: 38px; font-weight: 900; color: #FFD700; text-shadow: 0 0 15px rgba(255, 215, 0, 0.8); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 40px; animation: pulseName 1s infinite alternate; }
+.flag-icon { font-size: 60px; display: block; margin: 0 auto 10px; filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); }
+.champ-close-btn { padding: 10px 30px; background: #333; border: 2px solid #555; border-radius: 8px; color: #fff; font-weight: 700; cursor: pointer; transition: all 0.2s; text-transform: uppercase; }
+.champ-close-btn:hover { background: #ff003c; border-color: #ff003c; box-shadow: 0 0 15px rgba(255, 0, 60, 0.4); }
+
+@keyframes pulseName { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.02); opacity: 0.95; } }
+@keyframes ledPulseGold { 0%, 100% { box-shadow: 0 0 50px rgba(255, 215, 0, 0.4), 0 0 70px rgba(255, 0, 60, 0.3); } 50% { box-shadow: 0 0 60px rgba(255, 215, 0, 0.7), 0 0 80px rgba(255, 0, 60, 0.5); } }
+
+/* --- FASTWAY RECAP QUALIF --- */
+.recap-wrapper {
+    position: relative; border-radius: 18px; padding: 3px;
+    background: linear-gradient(90deg, #ff003c, #0077ff, #ff003c); background-size: 300% 300%;
+    box-shadow: 0 0 25px rgba(255,0,60,0.4), 0 0 40px rgba(0,120,255,0.3);
+    animation: ledPulse 3.5s infinite, ledGradient 6s linear infinite;
+    transform: scale(0.9); transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+    max-height: 90vh; display: flex; flex-direction: column;
+}
+.fastway-modal-overlay.active .recap-wrapper { transform: scale(1); }
+.recap-content {
+    background: #1a1a1a; border-radius: 15px; padding: 25px;
+    width: 400px; max-width: 95vw; color: #fff; display: flex; flex-direction: column; overflow: hidden;
+}
+.recap-title {
+    margin: 0; font-weight: 800; letter-spacing: 1px; font-size: 22px; text-transform: uppercase;
+    background: linear-gradient(#fff, #999); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.recap-table-container { overflow-y: auto; max-height: 60vh; border-radius: 8px; background: #111; border: 1px solid #333; }
+.recap-table-fastway { width: 100%; border-collapse: collapse; font-size: 14px; }
+.recap-table-fastway th { background: #222; color: #888; font-size: 11px; text-transform: uppercase; padding: 10px; text-align: center; }
+.recap-table-fastway td { padding: 10px; text-align: center; border-bottom: 1px solid #333; }
+.recap-close-btn {
+    padding: 10px 30px; border: none; border-radius: 8px; background: linear-gradient(135deg, #0077ff, #0055cc);
+    color: #fff; font-weight: bold; cursor: pointer; box-shadow: 0 4px 15px rgba(0,119,255,0.4); transition: transform 0.2s;
+}
+.recap-close-btn:hover { transform: scale(1.05); }
+
+/* --- FASTWAY CHAMPION --- */
+.champion-wrapper {
+    position: relative; border-radius: 24px; padding: 5px;
+    background: linear-gradient(90deg, #FFD700, #ff003c, #FFD700); background-size: 300% 300%;
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.4), 0 0 70px rgba(255, 0, 60, 0.3);
+    animation: ledPulseGold 3.5s infinite, ledGradient 4s linear infinite;
+    transform: scale(0.8); transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.fastway-modal-overlay.active .champion-wrapper { transform: scale(1); }
+.champion-content { background: #111; border-radius: 21px; padding: 40px 50px; width: 450px; max-width: 90vw; text-align: center; }
+.race-win-title { font-weight: 900; letter-spacing: 2px; font-size: 20px; color: #ff003c; text-transform: uppercase; text-shadow: 0 0 10px rgba(255, 0, 60, 0.5); margin-bottom: 25px; }
+.champ-name { font-size: 38px; font-weight: 900; color: #FFD700; text-shadow: 0 0 15px rgba(255, 215, 0, 0.8); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 40px; animation: pulseName 1s infinite alternate; }
+.flag-icon { font-size: 60px; display: block; margin: 0 auto 10px; filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); }
+.champ-close-btn { padding: 10px 30px; background: #333; border: 2px solid #555; border-radius: 8px; color: #fff; font-weight: 700; cursor: pointer; transition: all 0.2s; text-transform: uppercase; }
+.champ-close-btn:hover { background: #ff003c; border-color: #ff003c; box-shadow: 0 0 15px rgba(255, 0, 60, 0.4); }
+@keyframes pulseName { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.02); opacity: 0.95; } }
+@keyframes ledPulseGold { 0%, 100% { box-shadow: 0 0 50px rgba(255, 215, 0, 0.4), 0 0 70px rgba(255, 0, 60, 0.3); } 50% { box-shadow: 0 0 60px rgba(255, 215, 0, 0.7), 0 0 80px rgba(255, 0, 60, 0.5); } }
